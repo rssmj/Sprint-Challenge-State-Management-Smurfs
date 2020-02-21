@@ -8,7 +8,6 @@ function App() {
     return (
       <div className='App'>
         <h1 className='titleSmurfs'>SMURFS!</h1>
-        <div className='image'>
           <SmurfForm />
           <SmurfList />
         </div>
