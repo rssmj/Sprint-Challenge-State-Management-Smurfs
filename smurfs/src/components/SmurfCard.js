@@ -9,8 +9,8 @@ const SmurfCard = props => {
 		<div>
 			<div className='card'>
 				<h2>{props.smurf.name}</h2>
+				<h3>{props.smurf.age}</h3>
 				<h3>{props.smurf.height}</h3>
-				<h3>{props.smurf.nickname}</h3>
 			</div>
 		</div>
 	);

@@ -10,8 +10,8 @@ const SmurfForm = props => {
 	const [smurf, setSmurf] = useState({
 		name: '',
 		age: '',
-        height: '',
-        id: ''
+		height: '',
+		id: ''
 	});
 
 	const inputHandler = e => {

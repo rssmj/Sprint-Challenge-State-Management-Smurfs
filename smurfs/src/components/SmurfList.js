@@ -11,7 +11,7 @@ const SmurfList = props => {
 
 	useEffect(() => {
 		props.fetchSmurfs();
-	}, []);
+	}, [props]);
 	return (
 		<div>
 			<h1 className='titleList'>Smurf List</h1>

@@ -11,7 +11,6 @@ function App() {
           <SmurfForm />
           <SmurfList />
         </div>
-      </div>
     );
   }
 
