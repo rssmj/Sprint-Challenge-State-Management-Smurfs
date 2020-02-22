@@ -1,28 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
+* {
+	margin: 0 auto;
+	font-family: 'Bebas Neue';
+}
+
 .App {
-  text-align: center;
+	transition: 0.3s linear;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+	margin-top: 4rem;
+	background: url('./assets/smurf-bg.png') no-repeat center center/cover;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.titleContainer {
+	display: flex;
+	background-color: rgba(69, 169, 216, 0.55);
+	box-shadow: 1rem 1rem 3.5rem 5rem rgba(69, 169, 216, 0.55);
+	border: transparent;
+	border-radius: 15rem;
+	height: 25rem;
+	width: 25rem;
+	margin-bottom: 4rem;
+	transition: 0.8s;
 }
 
-.App-title {
-  font-size: 1.5em;
+.smurfImg {
+	content: url('./assets/smurf.png');
+	height: 25rem;
+	width: 25rem;
+	transition: 1.3s ease-out;
 }
 
-.App-intro {
-  font-size: large;
+.smurfImg:hover {
+	height: 34rem;
+	width: 34rem;
+	transform: translate(5rem, 10rem);
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.titleSmurfs {
+	font-size: 5.5rem;
+	letter-spacing: 0.3rem;
+	color: rgba(255, 255, 255, 0.99);
+	box-shadow: 1rem 1rem 3.5rem 5rem rgba(69, 169, 216, 0.55);
+	background-color: rgba(69, 169, 216, 0.55);
+	margin: 10rem 0 2rem 10rem;
+	width: 15rem;
+	height: 15rem;
+	border: transparent;
+	border-radius: 10rem;
+	transition: 1s ease-in-out;
+}
+
+.titleSmurfs:hover {
+	font-size: 7rem;
+	color: rgba(142, 148, 242, 0.88);
+}
+
+.smurfForm {
+	margin: 1rem 20rem;
+	padding: 1.5rem;
+	box-shadow: 2rem 2rem 5rem 5rem rgba(69, 169, 216, 0.77);
+	background-color: rgba(255, 255, 255, 0.33);
+	border: transparent;
+	border-radius: 8rem;
+}
+
+.input {
+	font-size: 1.3rem;
+	width: 15rem;
+	text-align: center;
+	letter-spacing: 0.4rem;
+	padding: 1.4rem 10rem;
+	margin-left: -0.8rem;
+	border: transparent;
+	box-shadow: 0.2rem 1rem 6rem 1.5rem rgba(255, 169, 216, 0.88);
+	border-radius: 0.5rem;
+	outline: transparent;
+	transition: 0.5s linear;
+}
+
+.input:focus {
+	box-shadow: 0.2rem 0.2rem 2rem 0.2rem rgba(243, 241, 239, 0.88);
+	border-right: 0.1rem solid rgba(200, 200, 200, 0.6);
+	border-left: 0.1rem solid rgba(200, 200, 200, 0.6);
+}
+
+.btn {
+	margin: 2rem 0 0 5rem;
+	font-size: 1.5rem;
+	font-weight: 100;
+	letter-spacing: 0.4rem;
+	padding: 1.8rem 6rem;
+	border-radius: 0.8rem;
+	outline: transparent;
+	border: 0.1rem solid rgba(0, 0, 0, 0.33);
+	background-color: rgba(177, 25, 232, 0.22);
+	color: rgba(255, 255, 255, 0.88);
+	transition: 0.5s linear;
+}
+
+.btn:hover {
+	background-color: rgba(255, 169, 216, 0.66);
+	border: 0.1rem solid rgba(255, 255, 255, 0.77);
+	box-shadow: 0.2rem 0.2rem 2rem 0.2rem rgba(243, 241, 239, 0.88);
+}
+
+.titleList {
+	text-align: center;
+	color: #ffffff;
+	font-size: 3rem;
+	margin-top: 12rem;
+}
+
+.card-container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 4rem 5rem 0 5rem;
+	transition: 0.5s linear;
+}
+
+.card {
+	background-color: rgba(243, 241, 239, 1);
+	padding: 3rem;
+	margin: 1rem;
+	border-radius: 5%;
+	width: 14rem;
+	height: 6.5rem;
+	transition: 0.3s linear;
+	text-align: center;
+	box-shadow: 0.2rem 1rem 5rem 1.5rem rgba(243, 241, 239, 0.88);
+	transition: 0.5s linear;
+}
+
+.card:hover {
+	box-shadow: 0.2rem 0.2rem 2rem 0.2rem rgba(255, 169, 216, 0.88);
+}
+
+input::-webkit-input-placeholder {
+	transition: 0.3s linear;
+	opacity: 0.5;
+}
+input:focus::-webkit-input-placeholder {
+	color: transparent;
 }

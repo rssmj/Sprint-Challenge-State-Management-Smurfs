@@ -24,15 +24,16 @@ const SmurfForm = props => {
 	};
 	return (
 		<div>
-			<form className='SmurfForm'>
-				<h1 className='formTitle'>Enter Smurf Data</h1>
+			<h1 className='titleSmurfs'>GET SMURFN'!</h1>
+			<form className='smurfForm'>
+				<h1 className='formTitle'></h1>
 				<label htmlFor='name'></label>
 				<input
 					className='input'
 					type='text'
 					name='name'
 					label='name'
-					placeholder='Name'
+					placeholder='SMURF'
 					value={props.name}
 					onChange={inputHandler}
 				/>
@@ -42,7 +43,7 @@ const SmurfForm = props => {
 					type='text'
 					name='age'
 					label='age'
-					placeholder='Age'
+					placeholder='SMURF'
 					value={props.age}
 					onChange={inputHandler}
 				/>
@@ -52,12 +53,12 @@ const SmurfForm = props => {
 					type='text'
 					name='height'
 					label='height'
-					placeholder='Height'
+					placeholder='SMURF'
 					value={props.height}
 					onChange={inputHandler}
 				/>{' '}
 				<button onClick={submitHandler} className='btn'>
-					Add Smurfs
+					SMURF UP{' '}
 				</button>
 			</form>
 		</div>
