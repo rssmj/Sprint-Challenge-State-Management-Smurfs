@@ -33,7 +33,7 @@ const SmurfForm = props => {
 					type='text'
 					name='name'
 					label='name'
-					placeholder='SMURF'
+					placeholder='NAME'
 					value={props.name}
 					onChange={inputHandler}
 				/>
@@ -43,7 +43,7 @@ const SmurfForm = props => {
 					type='text'
 					name='age'
 					label='age'
-					placeholder='SMURF'
+					placeholder='AGE'
 					value={props.age}
 					onChange={inputHandler}
 				/>
@@ -53,14 +53,16 @@ const SmurfForm = props => {
 					type='text'
 					name='height'
 					label='height'
-					placeholder='SMURF'
+					placeholder='HEIGHT'
 					value={props.height}
 					onChange={inputHandler}
 				/>{' '}
-				<button onClick={submitHandler} className='btn'>
-					SMURF UP{' '}
-				</button>
 			</form>
+			<div>
+				<button onClick={submitHandler} className='btn'>
+					SMURF!{' '}
+				</button>
+			</div>
 		</div>
 	);
 };
