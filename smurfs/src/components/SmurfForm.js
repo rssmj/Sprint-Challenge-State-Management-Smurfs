@@ -9,9 +9,9 @@ const SmurfForm = props => {
 
 	const [smurf, setSmurf] = useState({
 		name: '',
-		age: '',
+		age: 0,
 		height: '',
-		id: ''
+		id: Date.now()
 	});
 
 	const inputHandler = e => {
@@ -24,12 +24,11 @@ const SmurfForm = props => {
 	};
 	return (
 		<div>
-			<h1 className='titleSmurfs'>GET SMURFN'!</h1>
 			<form className='smurfForm'>
-				<h1 className='formTitle'></h1>
+				{/* <h1 className='formTitle'></h1> */}
 				<label htmlFor='name'></label>
 				<input
-					className='input'
+					className='smurfInput'
 					type='text'
 					name='name'
 					label='name'
@@ -39,7 +38,7 @@ const SmurfForm = props => {
 				/>
 				<label htmlFor='age'></label>
 				<input
-					className='input'
+					className='smurfInput'
 					type='text'
 					name='age'
 					label='age'
@@ -49,7 +48,7 @@ const SmurfForm = props => {
 				/>
 				<label htmlFor='height'></label>
 				<input
-					className='input'
+					className='smurfInput'
 					type='text'
 					name='height'
 					label='height'
@@ -60,7 +59,7 @@ const SmurfForm = props => {
 			</form>
 			<div>
 				<button onClick={submitHandler} className='btn'>
-					SMURF!{' '}
+					SMURF HERE{' '}
 				</button>
 			</div>
 		</div>

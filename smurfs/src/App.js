@@ -7,7 +7,11 @@ function App() {
 	return (
 		<div className='App'>
 			<div className='titleContainer'>
-				<h1 className='smurfImg'></h1>
+				<h1 className='smurfTitle'>SMURFN'</h1>
+				<h1 className='smurfTitle'>SMURFS!</h1>
+			</div>
+			<div className='imgContainer'>
+				<div className='smurfImg'></div>
 			</div>
 			<SmurfForm />
 			<SmurfList />

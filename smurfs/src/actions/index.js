@@ -13,7 +13,7 @@ export const fetchSmurfs = () => dispatch => {
 		})
 		.catch(err => {
 			console.log(err);
-			dispatch({ type: FETCH_FAIL, payload: err });
+			dispatch({ type: FETCH_FAIL, payload: err.res });
 		});
 };
 
@@ -31,5 +31,22 @@ export const postSmurfs = smurf => dispatch => {
 		.catch(err => {
 			console.log(err);
 			dispatch({ type: POST_FAIL, payload: err.res });
+		});
+};
+
+export const DELETE_DATA = 'DELETE_DATA';
+export const DELETE_SUCCESS = 'DELETE_SUCCESS';
+export const DELETE_FAIL = 'DELETE_FAIL';
+export const deleteSmurfs = smurf => dispatch => {
+	dispatch({ type: DELETE_DATA });
+	axios
+		.delete(`http://localhost:3333/smurfs/${smurf.id}`)
+		.then(res => {
+			console.log(res.data);
+			dispatch({ type: DELETE_SUCCESS, payload: res.data });
+		})
+		.catch(err => {
+			console.log(err);
+			dispatch({ type: DELETE_FAIL, payload: err.res });
 		});
 };

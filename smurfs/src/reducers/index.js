@@ -5,7 +5,10 @@ import {
 	FETCH_FAIL,
 	POST_DATA,
 	POST_SUCCESS,
-	POST_FAIL
+	POST_FAIL,
+	DELETE_DATA,
+	DELETE_SUCCESS,
+	DELETE_FAIL
 } from '../actions';
 
 // setup initialState
@@ -17,7 +20,7 @@ const initialState = {
 };
 
 // setup  an empty reducer
-const smurfReducer = (state = initialState, action) => {
+export const smurfReducer = (state = initialState, action) => {
 	// setup swtich, cases, and default
 	switch (action.type) {
 		case FETCH_DATA:
@@ -43,7 +46,6 @@ const smurfReducer = (state = initialState, action) => {
 			return {
 				...state,
 				isPosting: true,
-				smurfs: [...state.smurfs],
 				errors: ''
 			};
 		case POST_SUCCESS:
@@ -59,10 +61,28 @@ const smurfReducer = (state = initialState, action) => {
 				isPosting: false,
 				errors: action.payload
 			};
+		case DELETE_DATA:
+			return {
+				...state,
+				isFetching: true,
+				errors: ''
+			};
+		case DELETE_SUCCESS:
+			return {
+				...state,
+				smurfs: action.payload,
+				isFetching: false,
+				errors: ''
+			};
+		case DELETE_FAIL:
+			return {
+				...state,
+				errors: action.payload
+			};
 		default:
 			return state;
 	}
 };
 
 // export the reducer
-export default smurfReducer;
+// export default smurfReducer;

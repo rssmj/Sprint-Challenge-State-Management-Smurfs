@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import smurfReducer from './reducers';
+import { smurfReducer } from './reducers';
 import thunk from 'redux-thunk';
 
 const store = createStore(smurfReducer, applyMiddleware(thunk));

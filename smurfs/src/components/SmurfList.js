@@ -9,13 +9,18 @@ const SmurfList = props => {
 	// 2.1
 	console.log(props);
 
-	useEffect(() => {
-		props.fetchSmurfs();
-	}, [props]);
+	useEffect(
+		() => {
+			props.fetchSmurfs();
+		},
+		[
+			// props
+		]
+	);
 	return (
 		<div>
-			<h1 className='titleList'></h1>
-			<div className='card-container'>
+			{/* <h1 className='titleList'></h1> */}
+			<div className='smurfContainer'>
 				{props.smurfs.map(smurf => (
 					<SmurfCard key={smurf.id} smurf={smurf} />
 				))}
