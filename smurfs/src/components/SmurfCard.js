@@ -14,8 +14,12 @@ const SmurfCard = ({ smurf, deleteSmurfs }) => {
 				<h2>{smurf.name}</h2>
 				<h3>{smurf.age}</h3>
 				<h3>{smurf.height}</h3>
-				<button onClick={() => deleteSmurfs(smurf)} className='imTooYoungToDie'>
-					[ -_- ]
+				<button className='deleteBtn' onClick={() => deleteSmurfs(smurf)}>
+					<div className='deathContainer'>
+						{' '}
+						<span className='imTooYoungToDie'>X</span>
+						<span className='deleteSmurf'>I dont want to die!</span>
+					</div>
 				</button>
 			</div>
 		</div>

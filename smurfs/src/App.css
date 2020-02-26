@@ -106,6 +106,16 @@ body {
 	border-left: 0.1rem solid rgba(200, 200, 200, 0.6);
 }
 
+.smurfInput::-webkit-input-placeholder {
+	font-size: 1.5rem;
+	transition: 0.3s linear;
+	opacity: 0.5;
+}
+
+.smurfInput:focus::-webkit-input-placeholder {
+	color: transparent;
+}
+
 .btn {
 	display: flex;
 	margin: 0 auto;
@@ -134,7 +144,7 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin: 9rem 6rem;
+	margin: 9rem 15rem;
 	transition: 0.5s linear;
 }
 
@@ -143,11 +153,11 @@ body {
 	letter-spacing: 0.3rem;
 	line-height: 3.3rem;
 	background-color: rgba(243, 241, 239, 1);
-	padding: 5rem;
-	margin: 4rem;
+	padding: 3.5rem 5rem;
+	margin: 1rem 6rem 4rem;
 	border-radius: 5%;
+	height: 12rem;
 	width: 18rem;
-	height: 8.5rem;
 	transition: 0.3s linear;
 	text-align: center;
 	box-shadow: 0.2rem 1rem 5rem 1.5rem rgba(243, 241, 239, 0.88);
@@ -158,12 +168,72 @@ body {
 	box-shadow: 0.2rem 0.2rem 2rem 0.2rem rgba(255, 169, 216, 0.88);
 }
 
-.smurfInput::-webkit-input-placeholder {
-	font-size: 1.5rem;
-	transition: 0.3s linear;
-	opacity: 0.5;
+.deleteBtn {
+	margin-top: 2rem;
+	height: 6rem;
+	width: 6rem;
+	background-color: rgba(243, 241, 239, 1);
+	border: transparent;
+	border-radius: 6rem;
+	outline: transparent;
+	transition: 0.5s ease-in-out;
 }
 
-.smurfInput:focus::-webkit-input-placeholder {
-	color: transparent;
+.deleteBtn:not(:active) {
+	transition-delay: 0.05s;
+}
+
+.deathContainer {
+	position: relative;
+	display: flex;
+	transition-delay: 0.05s;
+}
+
+.imTooYoungToDie {
+	content: url('./assets/smurf.png');
+	width: 5rem;
+	height: 5rem;
+	background-color: rgba(243, 241, 239, 1);
+	border-radius: 6rem;
+	border: transparent;
+	transition: 0.2s linear;
+}
+
+.imTooYoungToDie:hover {
+	background-color: rgba(255, 169, 216, 0.77);
+	box-shadow: 0.2rem 0.2rem 2rem 2rem rgba(255, 169, 216, 0.77);
+}
+
+.imTooYoungToDie:active {
+	height: 25rem;
+	width: 25rem;
+	transform: translate(0rem, -90rem);
+	box-shadow: 1rem 1rem 3rem 4rem rgba(255, 0, 0, 0.88);
+	background-color: rgba(255, 0, 0, 0.88);
+	border: transparent;
+	border-radius: 25rem;
+}
+
+.deleteSmurf {
+	transition: 0.5s linear;
+	transition-delay: 0.4s;
+}
+
+.deathContainer .deleteSmurf {
+	visibility: hidden;
+	width: 14rem;
+	margin: 2.1rem 6rem;
+	padding: 0.2rem;
+	font-size: 1.6rem;
+	letter-spacing: 0.075rem;
+	text-align: center;
+	color: rgba(243, 241, 239, 1);
+	background-color: rgba(255, 169, 216, 0.77);
+	border-radius: 4rem;
+	border: transparent;
+	position: absolute;
+}
+
+.deathContainer:hover .deleteSmurf {
+	visibility: visible;
 }

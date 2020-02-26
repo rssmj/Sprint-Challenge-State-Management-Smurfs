@@ -14,7 +14,7 @@ const SmurfList = props => {
 			props.fetchSmurfs();
 		},
 		[
-			// props
+			props
 		]
 	);
 	return (
